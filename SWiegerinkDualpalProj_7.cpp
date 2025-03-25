@@ -35,7 +35,7 @@ int main()
                 }
                 if(check > 1)
                 {
-                    fout << j;
+                    fout << j << endl;
                     found++;
                     break;
                 }
