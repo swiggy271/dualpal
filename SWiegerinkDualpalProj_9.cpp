@@ -16,12 +16,13 @@ ofstream fout ("dualpal.out");
 // function and variable declaration
 string baseConvert(int number, int base);
 bool palindromeCheck(string b);
-int numNums, startNum, found, check;
+int numNums, startNum, found, check, j;
 
 int main()
 {
     fin >> numNums >> startNum;
     found = 0;
+    j = startNum + 1;
     while(found < numNums)
     {
         check = 0;
@@ -38,6 +39,7 @@ int main()
                 break;
             }
         }
+        j++;
     }
 }
 
