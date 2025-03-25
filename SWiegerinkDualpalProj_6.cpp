@@ -37,11 +37,10 @@ int main()
                 {
                     fout << j;
                     found++;
-                    goto exit_quick;
+                    break;
                 }
             }
         }
-        exit_quick:
     }
 }
 
