@@ -22,7 +22,7 @@ int main()
 {
     fin >> numNums >> startNum;
     found = 0;
-    for(int j = startNum; j < 10000; j++)
+    for(int j = startNum + 1; j < 10000; j++)
     {
         check = 0;
         if(found < numNums)
@@ -37,9 +37,11 @@ int main()
                 {
                     fout << j;
                     found++;
+                    goto exit;
                 }
             }
         }
+        exit:
     }
 }
 
