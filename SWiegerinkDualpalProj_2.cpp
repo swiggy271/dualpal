@@ -33,7 +33,7 @@ int main()
                 {
                     check++;
                 }
-                if(check > 10)
+                if(check > 1)
                 {
                     fout << j;
                     found++;
