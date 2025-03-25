@@ -4,6 +4,17 @@ TASK: dualpal
 LANG: C++
 */
 
+// NAME                    : Shuler Wiegerink
+// GROUP                   : Hexadecimal
+// LAST MODIFIED           : 25 March 2025
+// PROBLEM ID              : USACO dualpal
+// PROBLEM DESCRIPTION     : Reads in a number containing a number to start at and
+//                           an amount to find, and finds that number of integers greater          
+//                           than the first that are palindromic in at least 2 bases 2-10.
+// SOURCES I USED          : USACO website
+// PEOPLE I HELPED         : 
+// PEOPLE WHO HELPED ME    : Mr. Houtrouw
+
 using namespace std;
 
 #include <iostream>
@@ -20,14 +31,17 @@ int numNums, startNum, found, check, j;
 
 int main()
 {
+    // reads in input file
     fin >> numNums >> startNum;
     found = 0;
     j = startNum + 1;
+    // loops through finding algortithm
     while(found < numNums)
     {
         check = 0;
         for(int q = 2; q < 11; q++)
         {
+            // increments check variable until it finds 2 bases the number is palindromic in
             if(palindromeCheck(baseConvert(j, q)) == 1)
             {
                 check++;
