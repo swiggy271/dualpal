@@ -22,23 +22,20 @@ int main()
 {
     fin >> numNums >> startNum;
     found = 0;
-    for(int j = startNum + 1; j < 10000; j++)
+    while(found < numNums)
     {
         check = 0;
-        if(found < numNums)
+        for(int q = 2; q < 11; q++)
         {
-            for(int q = 2; q < 11; q++)
+            if(palindromeCheck(baseConvert(j, q)) == 1)
             {
-                if(palindromeCheck(baseConvert(j, q)) == 1)
-                {
-                    check++;
-                }
-                if(check > 1)
-                {
-                    fout << j << endl;
-                    found++;
-                    break;
-                }
+                check++;
+            }
+            if(check > 1)
+            {
+                fout << j << endl;
+                found++;
+                break;
             }
         }
     }
